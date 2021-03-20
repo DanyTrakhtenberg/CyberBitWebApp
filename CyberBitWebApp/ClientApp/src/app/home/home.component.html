@@ -1,0 +1,10 @@
+
+
+
+<app-user-login  (notifyLogin)="login($event)"></app-user-login>
+<app-enter-task (notifyTask)="AddTask($event)" ></app-enter-task>
+
+<app-task-diplay header="Done" [tasks]='displayTask.doneTasks' ></app-task-diplay>
+<app-task-diplay header="Late" [tasks]='displayTask.lateTasks' ></app-task-diplay>
+<app-task-diplay header="onTime" [tasks]='displayTask.OnTimeTaks' ></app-task-diplay>
+

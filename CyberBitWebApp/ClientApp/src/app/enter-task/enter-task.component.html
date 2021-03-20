@@ -1,0 +1,8 @@
+
+<h2>Tasks</h2>
+<p>Task Detail</p>
+<input  [(ngModel)]="task.descriptioin" type="text" class="form-control" />
+<p>Due date:</p>
+<input type="date" [(ngModel)]="task.dueDate">
+<p></p>
+<input type="button" (click)="addTask()" value="Add Task">
