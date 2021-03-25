@@ -2,6 +2,6 @@
 
 <div style="border: 2px black solid;">
     <p *ngFor="let task of tasks">
-        {{task.descriptioin}} {{task.dueDate}}
+        {{task.description}} {{task.dueDate.getDate()+1}}/{{task.dueDate.getMonth()+1}}/{{task.dueDate.getFullYear()}}
     </p>
 </div>

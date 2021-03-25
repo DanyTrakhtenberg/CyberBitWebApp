@@ -16,6 +16,7 @@ export class HomeComponent {
   displayTask:DisplayTask
   constructor(private loginDataService: LoginDataService,private sortTasksService: SortTasksService, @Inject('BASE_URL') baseUrl: string) {
     this.baseUrl = baseUrl;
+    this.displayTask = new DisplayTask();
   }
 
   login(userName: string) {
@@ -27,11 +28,12 @@ export class HomeComponent {
   }
 
   AddTask(task: Task) {
+    task.dueDate = new Date(task.dueDate);
     this.user.tasks.push(task);
       let user = new User();
       user.name= this.user.name;
       user.tasks.push(task);
-     this.loginDataService.postTaskToUser(user,this.baseUrl)
+     this.loginDataService.postTaskToUser(user,this.baseUrl).subscribe();
   }
 
 }

@@ -3,6 +3,14 @@ export class DisplayTask {
 
     doneTasks: Task[];
     lateTasks: Task[];
-    OnTimeTaks: Task[];
+    OnTimeTasks: Task[];
+    /**
+     *
+     */
+    constructor() {
+        this.OnTimeTasks = [];
+        this.doneTasks = [];
+        this.lateTasks = [];
 
+    }
 }

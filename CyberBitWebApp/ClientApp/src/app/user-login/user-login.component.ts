@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent implements OnInit {
-  @Input() userName: string
+  userName: string = 'Dany';
   @Output() notifyLogin: EventEmitter<string> = new EventEmitter();
   constructor() { }
   ngOnInit(): void {

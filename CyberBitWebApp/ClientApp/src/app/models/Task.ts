@@ -1,6 +1,6 @@
 export class Task{
 
-    descriptioin: string;
-    dueDate:any;
+    description: string;
+    dueDate:Date;
 }
 

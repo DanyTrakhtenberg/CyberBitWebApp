@@ -16,10 +16,11 @@ export class SortTasksService {
     for (let index = 0; index < tasks.length; index++) {
       const task = tasks[index];
       let taskDate = new Date(task.dueDate);
-      if (taskDate == dateNow) {
-        displayTask.OnTimeTaks.push(task);
+      taskDate.setHours(0,0,0);
+      if (taskDate.toString() === dateNow.toString()) {
+        displayTask.OnTimeTasks.push(task);
       }
-      else if (taskDate > dateNow) {
+      else if (taskDate.toString() > dateNow.toString()) {
         displayTask.lateTasks.push(task);
       }
       else {
